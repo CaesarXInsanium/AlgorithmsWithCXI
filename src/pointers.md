@@ -84,4 +84,20 @@ void *k = &j;
 
 ## Function Pointers
 
+function pointers point to executable code and other blocks of information. Functions are data.
+Declaring pointers to functions involves declaring parameters and return type.
 
+```c
+int (*match)(void *key1, void *key2);
+```
+
+declared functions allow use to be able to set funtion pointer to be the value of any other function.
+Executing it is the same as ever and will require the appropiate parameters. Useful in switching between 
+implementations and being able to switch between different but similar functions
+
+## Questions and Answers
+
+I do not understand just yet these questions
+
+C++ apperantly enforces practices of good software engineering, particulay with the use of constructors and destructors.
+Better than the way that C does it.
