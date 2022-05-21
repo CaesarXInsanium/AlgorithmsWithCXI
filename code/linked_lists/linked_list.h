@@ -13,20 +13,25 @@ typedef struct List {
   ListElmt *tail;
 } List;
 
-// we must be able to pass a function that is capable of freeing the relewant
-// memory, generally free(). will create data structure but with not elements. head and tail are NULL
+// This function must be called in order to be able to use and apply other
+// operations data structure. Destroy function is used to handle dynamically
+// allocated elements. Generally free() Will create data structure but with not
+// elements. head and tail are NULL
 void list_init(List *list, void (*destroy)(void *data));
 
-// goes trough each element and calls the appropiate destruction function
+// Goes trough each element and calls the list_rem_next on each element. Uses
+// destruction function.
 void list_destroy(List *list);
 
-// inserts new data at specified location
+// Inserts new data at specified location. Updates size counter. Resets tail
+// and head point when appropiate. Int denotes success value
 int list_ins_next(List *list, ListElmt *element, const void *data);
 
-// removes element from specified location
+// Removes element after selected element pointer. Passes deleted element
+// pointer to parameter data. Int denotes success value
 int list_rem_next(List *list, ListElmt *element, void **data);
 
-// returns number of elements in list
+// Returns number of elements in list
 int list_size(const List *list);
 
 // returns point to head of linked list
