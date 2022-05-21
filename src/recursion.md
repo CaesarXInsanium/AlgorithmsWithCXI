@@ -33,3 +33,7 @@ gets sentinal value a the maintains the final value from the function that will 
 
 Essential with each level in recursion that the function goes down in, the lesst work that would be required to go up because it does not go up
 anymore, there is no need for unwinding
+
+## Questions and Answers
+
+- tail recursion is a fundamental concept that is used to reduce overhead of recursive functions calls
