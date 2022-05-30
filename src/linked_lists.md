@@ -1,17 +1,29 @@
 # Linked Lists
 
-this is literally just a chain of elements linked together only by pointers to the next elemnet.
+this is literally just a chain of elements linked together only by pointers to the next element.
 They are only better at insertions and deletions but everything else sucks.
 
 ## Definition
 
-single node in a linked list containt pointer to the data that such pointer owns and a pointer to the next element in the list.
-In order access any element in the list, it must be traversed in its entirety trought each element. Trought such problem can be mitigated.
-Each element is allocated dynamically.
+Single node in a linked list contains pointer to the data that such pointer owns and a pointer to the next element in the list. In order access any element in the list, it must be traversed in its entirety trought each element. Trought such problem can be mitigated. Each element is allocated dynamically. ## Singly Linked List
 
-## Singly Linked List
+### Management Example: Frames
+
+- linked list is often used in virtual memory when programs use more memory than what is actually available
+- virtual addresses are used, page table is used to map pages of virtual memory to frames of physical memoery
+- `page fault` occurs when virtual address is not assigned physical memory
+- linked list is optical since insertions and deletions are commonplace
+
+```c
+int alloc_frame(void); //will find a free frame and takes for usage
+int free_frame(void); //undoes previos function
+```
 
 ## Doubly Linked List
+
+each element in doubly linked list contains pointers to previous and next elements in the linked list.
+Head and tail items in linked list have NULL points on the corresponding sections. Allows for backwards traversal in a list.
+
 
 ## Circular List
 
@@ -21,7 +33,7 @@ Each element is allocated dynamically.
 
 ## Polynomials
 
-## Memory Managment
+## Memory Management
 
 ## LISP
 

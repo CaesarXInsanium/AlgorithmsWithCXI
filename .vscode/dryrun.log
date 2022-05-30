@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/EXTRA/RootProjects/Books/AlgorithmsWithC'
+mdbook serve -p 3003
+make: Leaving directory '/EXTRA/RootProjects/Books/AlgorithmsWithC'
+ 

@@ -3,6 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 
+void test(int fn(void)) {
+  if (fn() == 0) {
+    puts("Test Passed");
+  } else {
+    puts("Test Failed");
+  }
+}
+
 void list_init(List *list, void (*destroy)(void *data)) {
   // init default values
   list->size = 0;
@@ -88,15 +96,20 @@ int list_rem_next(List *list, ListElmt *element, void **data) {
   list->size--;
   return 0;
 }
-int list_size(const List *list){
+int list_size(const List *list) {
   int k = list->size;
   return k;
 }
-// This is the main function. use for testing purposes only
-int main(void) {
+
+int basic_test(void) {
   List *list = malloc(sizeof(List));
   list_init(list, free);
   free(list);
-  puts("Hello World");
+  return 0;
+}
+// This is the main function. use for testing purposes only
+int main(void) {
+  puts("Testing Linked List");
+  test(basic_test);
   return 0;
 }

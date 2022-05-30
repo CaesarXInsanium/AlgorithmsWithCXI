@@ -47,10 +47,11 @@ element. Swap it out with the second element.
 
 Time that is takes for insertion sort to work is T(n) = size - 1 for search the next largest element.
 
-## Questions and Answers
+## Questions and Answers that are Awesome
 
 - Order of Complexities
   - constant, logorithmic, linear, logistic, quadratic, cubic, expoential, factorial
+
 
 ### Vocabulary
 

@@ -8,6 +8,4 @@ We are now going to go deeper and learn about data structures. We know about poi
 - hash tables
 - trees
 - heaps/priority queues
-- graphs
-
-
+- graphsda
