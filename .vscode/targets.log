@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 26 18:21:46 2022
+# Make data base, printed on Thu Jun  2 21:03:21 2022
 
 # Variables
 
@@ -17,9 +17,9 @@ LC_ALL = C
 # environment
 NO_AT_BRIDGE = 1
 # environment
-STARSHIP_SESSION_KEY = 9343327141916921
+STARSHIP_SESSION_KEY = 2610718497131151
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-140639a9-bc5f-40c4-819b-eee481a4f07c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-72d8d48b-7e01-4e28-8d0b-b2439128122e.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -87,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 1249464
+VSCODE_PID = 662117
 # environment
 XDG_SESSION_TYPE = tty
 # automatic
@@ -127,7 +127,7 @@ MOTD_SHOWN = pam
 # environment
 LC_TIME = en_US.UTF-8
 # environment
-INVOCATION_ID = ec30cfcee4b5403db398391d2ae751a2
+INVOCATION_ID = 950c3c5dfc41451a9b7e7b9b1a0254c4
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -151,7 +151,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 538
+SYSTEMD_EXEC_PID = 549
 # environment
 EDITOR = nvim
 # environment
@@ -280,6 +280,6 @@ all:
 # strcache performance: lookups = 33 / hit rate = 21%
 # hash-table stats:
 # Load=26/8192=0%, Rehash=0, Collisions=0/33=0%
-# Finished Make data base on Thu May 26 18:21:46 2022
+# Finished Make data base on Thu Jun  2 21:03:21 2022
 
  
