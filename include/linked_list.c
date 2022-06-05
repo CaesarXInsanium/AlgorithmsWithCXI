@@ -96,14 +96,31 @@ int list_rem_next(List *list, ListElmt *element, void **data) {
   list->size--;
   return 0;
 }
+
 int list_size(const List *list) {
   int k = list->size;
   return k;
 }
 
-int basic_test(void) {
-  List *list = malloc(sizeof(List));
-  list_init(list, free);
-  free(list);
+int list_map_loop(List *list, int map(void *data), int *result) {
+  ListElmt *current = list_head(list);
+
+  while (current->next != NULL) {
+    *result = map(current->data);
+    if (*result == -1) {
+      return -1;
+    }
+    current = current->next;
+  }
   return 0;
 }
+
+// int list_search(List *list, void *key, ListElmt *result){
+//
+//   ListElmt *current = list_head(list);
+//
+//   while (current->next != NULL) {
+//     current = current->next;
+//   }
+//   return 0;
+// }
