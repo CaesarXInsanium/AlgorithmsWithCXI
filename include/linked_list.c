@@ -3,14 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void test(int fn(void)) {
-  if (fn() == 0) {
-    puts("Test Passed");
-  } else {
-    puts("Test Failed");
-  }
-}
-
 void list_init(List *list, void (*destroy)(void *data)) {
   // init default values
   list->size = 0;
@@ -115,6 +107,8 @@ int list_map_loop(List *list, int map(void *data), int *result) {
   return 0;
 }
 
+// I think that the real way to try and implmented search is by actually using a wrapper 
+// data strucutre for the linked list
 // int list_search(List *list, void *key, ListElmt *result){
 //
 //   ListElmt *current = list_head(list);

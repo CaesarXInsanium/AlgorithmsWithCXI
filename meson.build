@@ -29,3 +29,8 @@ llisttest = executable('llist', 'tests/llist.c',
   include_directories: inc,
   link_with: algolib)
 test('linked_list', llisttest)
+
+dlist = executable('dlist', 'tests/dlist.c',
+  include_directories: inc,
+  link_with: algolib)
+test('dlist', dlist )
