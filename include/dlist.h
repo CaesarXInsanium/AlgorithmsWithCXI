@@ -38,23 +38,24 @@ int dlist_remove(DList *list, DListElmt *element, void **data);
 int dlist_size(const DList *list);
 
 // pointer to official beginning of list
-DListElmt *dlist_head(const DList *list);
+#define dlist_head(list) ((list)->head);
 
 // pointer to official end of list
-DListElmt *dlist_tail(const DList *list);
+#define dlist_tail(list) ((list)->tail)
 
 // checks if provided pointer leads to the head
-int dlist_is_head(const DListElmt *element);
+#define dlist_is_head(x) ((x)->prev == NULL)
 
-// checks if if provided pointer leads to tail
-int dlist_is_tail(const DListElmt *element);
+// checks if if provided pointer is last
+#define dlist_is_tail(x) ((x)->next == NULL)
 
 // returns pointer to data stored
-void *dlist_data(const DListElmt *element);
+#define dlist_data(x) ((x)->data)
 
 // returns pointer to next element specified by element
-DListElmt *dlist_next(const DListElmt *element);
+#define dlist_next(x) ((x)->next)
 
-// returns pointer to previous elements
+// returns pointer to previous element
 DListElmt *dlist_prev(const DListElmt *element);
+#define dlist_prev(x) ((x)->prev)
 #endif

@@ -3,6 +3,8 @@
 this is literally just a chain of elements linked together only by pointers to the next element.
 They are only better at insertions and deletions but everything else sucks.
 
+I think that after some implementations that it is simple a matter of fact of keeping your data and pointer straight
+
 ## Definition
 
 Single node in a linked list contains pointer to the data that such pointer owns and a pointer to the next element in the list. In order access any element in the list, it must be traversed in its entirety trought each element. Trought such problem can be mitigated. Each element is allocated dynamically. ## Singly Linked List
@@ -26,6 +28,11 @@ Head and tail items in linked list have NULL points on the corresponding section
 
 
 ## Circular List
+
+Circular list has no tail, only a head. 'last' element pointer actualy points to the head. once traversal to the end of such list is reached
+then the pointers just lead back to the head again.
+
+Circular list is merely is a somewhat modified singular linked list
 
 ## Mailing List
 

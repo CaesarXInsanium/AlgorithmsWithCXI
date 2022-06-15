@@ -14,6 +14,7 @@ inc = include_directories('include')
 foo_src = [
   'include/linked_list.c',
   'include/dlist.c',
+  'include/clist.c',
   'include/frames.c',
   ]
 
