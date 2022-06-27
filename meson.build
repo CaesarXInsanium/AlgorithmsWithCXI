@@ -14,7 +14,7 @@ inc = include_directories('include')
 foo_src = [
   'include/linked_list.c',
   'include/dlist.c',
-  'include/clist.c',
+  #  'include/clist.c',
   'include/frames.c',
   ]
 
@@ -35,3 +35,8 @@ dlist = executable('dlist', 'tests/dlist.c',
   include_directories: inc,
   link_with: algolib)
 test('dlist', dlist )
+
+# clist = executable('clist', 'tests/clist.c',
+#   include_directories: inc,
+#   link_with: algolib)
+# test('clist', clist)

@@ -1,13 +1,13 @@
 # Linked Lists
 
-this is literally just a chain of elements linked together only by pointers to the next element.
+This is literally just a chain of elements linked together only by pointers to the next element.
 They are only better at insertions and deletions but everything else sucks.
 
 I think that after some implementations that it is simple a matter of fact of keeping your data and pointer straight
 
 ## Definition
 
-Single node in a linked list contains pointer to the data that such pointer owns and a pointer to the next element in the list. In order access any element in the list, it must be traversed in its entirety trought each element. Trought such problem can be mitigated. Each element is allocated dynamically. ## Singly Linked List
+Single node in a linked list contains pointer to the data that such pointer owns and a pointer to the next element in the list. In order access any element in the list, it must be traversed in its entirety trough teach element. Trought such problem can be mitigated. Each element is allocated dynamically. ## Singly Linked List
 
 ### Management Example: Frames
 
@@ -34,18 +34,27 @@ then the pointers just lead back to the head again.
 
 Circular list is merely is a somewhat modified singular linked list
 
-## Mailing List
+### Example
 
-## Scrolled Lists
+Like how Linked list is used in order to manage frame allocation, circular linked list is excellent for managing swap space. A *clock* algorithm
+is used in order to which block of memory to swap between physical memory and swap disk
+Swap space is used in cases in which physical RAM is not enough to handle the data used by running applications and their is a sufficiently fast disk available. Block of memory are written to disk
+in a last used manner. The application that is the least used is the one that is sent to swap space.
+An algorithm is used to check which application is used least or not used at all. Kernel marks numbers on them and once they reach a certain threshhold they are automaticallty sent to swap.
 
-## Polynomials
+### Other Examples Of Using Linked Lists
 
-## Memory Management
+- Mailing List
+- Scrolled Lists
+- Polynomials
+- Memory Management
+- LISP
+- Linked Location of Files
 
-## LISP
+##  Other Facts
 
-## Linked Location of Files
-
-## Other Data Strucutures
-
+- Sole advantage of like list over arrays is when quick insertion and deletion are needed
+  - array however have easy access anywhere in the data structure. Linked lists must contend with looping through all elements in order to find one in particular
+  - array are useful when storage is limited
+- take a good look at the comparisons between perfoance in the different data structures
 

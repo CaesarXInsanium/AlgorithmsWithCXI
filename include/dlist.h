@@ -44,10 +44,10 @@ int dlist_size(const DList *list);
 #define dlist_tail(list) ((list)->tail)
 
 // checks if provided pointer leads to the head
-#define dlist_is_head(x) ((x)->prev == NULL)
+#define dlist_is_head(x) ((x)->prev == NULL ? 1 : 0)
 
 // checks if if provided pointer is last
-#define dlist_is_tail(x) ((x)->next == NULL)
+#define dlist_is_tail(x) ((x)->next == NULL ? 1 : 0)
 
 // returns pointer to data stored
 #define dlist_data(x) ((x)->data)
