@@ -46,8 +46,8 @@ int main(void) {
   assert(size == 10);
 
   // remove random element
-  int k2 = *(int *)malloc(sizeof(int));
-  list_rem_next(list, NULL, (void *)&k2);
+  void *k2 = NULL;
+  list_rem_next(list, NULL, &k2);
 
   void *pointer = NULL;
   list_rem_next(list, NULL, &pointer);

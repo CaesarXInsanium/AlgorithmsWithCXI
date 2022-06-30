@@ -16,6 +16,8 @@ foo_src = [
   'include/dlist.c',
   #  'include/clist.c',
   'include/frames.c',
+  'include/stack.c',
+  'include/queue.c'
   ]
 
 algolib = shared_library(
@@ -35,6 +37,16 @@ dlist = executable('dlist', 'tests/dlist.c',
   include_directories: inc,
   link_with: algolib)
 test('dlist', dlist )
+
+stack = executable('stack', 'tests/stack.c',
+  include_directories: inc,
+  link_with: algolib)
+test('stack', stack)
+
+queue = executable('queue', 'tests/queue.c',
+  include_directories: inc,
+  link_with: algolib)
+test('queue', queue)
 
 # clist = executable('clist', 'tests/clist.c',
 #   include_directories: inc,

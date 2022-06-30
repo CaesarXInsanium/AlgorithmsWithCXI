@@ -6,3 +6,4 @@
 - [Data Structures](./data_structures.md)
   - [Linked Lists](./linked_lists.md)
   - [Stacks and Queues](./stacks_queues.md)
+  - [Sets](./sets.md)
