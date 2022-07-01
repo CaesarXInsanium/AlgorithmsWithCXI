@@ -17,11 +17,12 @@ foo_src = [
   #  'include/clist.c',
   'include/frames.c',
   'include/stack.c',
-  'include/queue.c'
+  'include/queue.c',
+  'include/set.c'
   ]
 
-algolib = shared_library(
-  'algolib',
+libalgo_cxi = shared_library(
+  'libalgo_cxi',
   foo_src,
   include_directories: inc,
   install : true,
@@ -30,25 +31,31 @@ algolib = shared_library(
 
 llisttest = executable('llist', 'tests/llist.c',
   include_directories: inc,
-  link_with: algolib)
+  link_with: libalgo_cxi)
 test('linked_list', llisttest)
 
 dlist = executable('dlist', 'tests/dlist.c',
   include_directories: inc,
-  link_with: algolib)
+  link_with: libalgo_cxi)
 test('dlist', dlist )
+
+# clist = executable('clist', 'tests/clist.c',
+#
+#   include_directories: inc,
+#   link_with: libalgo_cxi)
+# test('clist', clist)
 
 stack = executable('stack', 'tests/stack.c',
   include_directories: inc,
-  link_with: algolib)
+  link_with: libalgo_cxi)
 test('stack', stack)
 
 queue = executable('queue', 'tests/queue.c',
   include_directories: inc,
-  link_with: algolib)
+  link_with: libalgo_cxi)
 test('queue', queue)
 
-# clist = executable('clist', 'tests/clist.c',
-#   include_directories: inc,
-#   link_with: algolib)
-# test('clist', clist)
+set = executable('set', 'tests/set.c',
+  include_directories: inc,
+  link_with: libalgo_cxi)
+test('set', set)

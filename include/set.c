@@ -1,0 +1,76 @@
+#include "set.h"
+#include <stdlib.h>
+#include <string.h>
+
+void set_init(Set *set, int (*match)(const void *key1, const void *key2),
+              void (*destroy)(void *data)) {
+  list_init(set, destroy);
+  set->match = match;
+  return;
+}
+
+int set_insert(Set *set, const void *data) {
+  if (set_is_member(set, data)) {
+    return 1;
+  }
+  return list_ins_next(set, list_tail(set), data);
+}
+
+int set_remove(Set *set, void **data) {
+  ListElmt *member, *prev;
+  prev = NULL;
+  for (member = list_head(set); member != NULL; member = list_next(member)) {
+    if (set->match(*data, list_data(member)))
+      break;
+  }
+
+  if (member == NULL)
+    return -1;
+
+  return list_rem_next(set, prev, data);
+}
+
+int set_union(Set *setu, const Set *set1, const Set *set2) {
+  // init variables
+  ListElmt *member;
+  void *data;
+  set_init(setu, set1->match, NULL);
+  // inset members of first set
+  for (member = list_head(set1); member != NULL; member = list_next(member)) {
+    data = list_data(member);
+    if (list_ins_next(setu, list_tail(setu), data) != 0) {
+      set_destroy(setu);
+      return -1;
+    }
+  }
+  for (member = list_head(set2); member != NULL; member = list_next(member)) {
+    if (set_is_member((Set *)set1, list_data(member))) {
+      continue; // will not allow insertion of duplicate
+    } else {
+      data = list_data(member);
+      if (list_ins_next(setu, list_tail(setu), data) != 0) {
+        // if anything repeats it must be removed
+        set_destroy(setu);
+        return -1;
+      }
+    }
+  }
+  return 0;
+}
+
+int set_intersection(Set *seti, const Set *set1, const Set *set2) {
+  ListElmt *member;
+  void *data;
+  set_init(seti, set1->match, NULL);
+  for (member = list_head(set1); member != NULL; member = list_next(member)) {
+    if (set_is_member((Set *)set2, list_data(member))) {
+      data = list_data(member);
+
+      if (list_ins_next(seti, list_tail(seti), data) != 0) {
+        set_destroy(seti);
+        return -1;
+      }
+    }
+  }
+  return 0;
+}
