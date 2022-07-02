@@ -39,4 +39,4 @@ we must make the smallest possible set C which contains all the skills required 
 
 ## Other Facts
 
-- due to the nature of boolean algebra some operations can be replaced with an other operation at the cost of performance in implementation
+- due to the nature of boolean algebra some operations can be replaced with another operation at the cost of performance in implementation
