@@ -36,7 +36,7 @@ int set_difference(Set *setd, const Set *set1, const Set *set2);
 // checks if void pointer matches any member and return boolean result
 int set_is_member(Set *set, const void *data);
 
-// checks if set2 is subset of set1. return bool
+// checks if set1 is subset of set2. return bool
 int set_is_subset(const Set *set1, const Set *set2);
 
 // return set equality boolean

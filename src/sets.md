@@ -24,7 +24,19 @@ Almost all the operations are n and set algebra is computer in quadratic time.
 - intersection: join only members that show up in both sets
 - difference: order dependent. A - B, remove all elements from B that exist in A
 
-## Practice
+## Practice and Examples
 
 Generally sets are implemented using linked lists, but other data structures can be used.
-Hash Tables are generally most efficient than Sets but not what we are doing
+Hash Tables are generally most efficient than Sets but not what we are doing.
+
+### Example: Set Covering
+
+Set covering that sets that contains other sets or subsets. Super set can have coverage of
+another set if and only if the conditions are met.
+Imagine creating a team of the least amount of people with the widest range of skills.
+Defining a set of subsets P which is a list of team members with their skills listed, and
+we must make the smallest possible set C which contains all the skills required and define in set S.
+
+## Other Facts
+
+- due to the nature of boolean algebra some operations can be replaced with an other operation at the cost of performance in implementation

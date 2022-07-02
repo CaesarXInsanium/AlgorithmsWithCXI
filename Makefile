@@ -1,10 +1,13 @@
 all:
-	meson compile -C build
+	meson compile -C build -v
 test:
 	meson test -C build
 
 stack: all
-	./build/stack
+	gdb ./build/stack
 
 queue: all
-	./build/queue
+	gdb ./build/queue
+
+set: all
+	gdb ./build/set
