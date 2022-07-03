@@ -7,5 +7,5 @@
   - [Linked Lists](./linked_lists.md)
   - [Stacks and Queues](./stacks_queues.md)
   - [Sets](./sets.md)
-    - [Hash Tables](./hash_tables.md)
+  - [Hash Tables](./hash_tables.md)
 
