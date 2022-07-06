@@ -13,7 +13,7 @@ int main(void) {
 
   for (int i = 0; i < 20; i++) {
     int *j = (int *)malloc(sizeof(int));
-    int *k = (int *)malloc(sizeof(int));
+    int *k = (int *)malloc(sizeof(int)); 
     *k = rand();
     *j = i;
     set_insert(seta, (void *)k);
@@ -23,8 +23,8 @@ int main(void) {
     int *j = (int *)malloc(sizeof(int));
     set_insert(setc, j);
   }
-  set_union(setd, seta, setc);
 
+  set_union(setd, seta, setb);
 
   set_destroy(seta);
   set_destroy(setb);
