@@ -31,6 +31,8 @@ it is determined what type it is. It is grouped with similar tokens and then a S
 
 ## Open-Addressed Hash Tables
 
+Open addressed hash tables are
+
 ## Proper Selection of Hash Function to avoid Collision
 
 The goal of the hash function is to minimize the number of collisions. 
