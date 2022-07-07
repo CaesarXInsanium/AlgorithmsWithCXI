@@ -12,13 +12,14 @@ build_args = [
 inc = include_directories('include')
 
 foo_src = [
-  'include/linked_list.c',
-  'include/dlist.c',
+  'source/llist.c',
+  'source/dlist.c',
   #  'include/clist.c',
-  'include/frames.c',
-  'include/stack.c',
-  'include/queue.c',
-  'include/set.c'
+  'source/frames.c',
+  'source/stack.c',
+  'source/queue.c',
+  'source/set.c',
+  'source/chtbl.c'
   ]
 
 algoocxi = shared_library(
@@ -32,7 +33,7 @@ algoocxi = shared_library(
 llisttest = executable('llist', 'tests/llist.c',
   include_directories: inc,
   link_with: algoocxi)
-test('linked_list', llisttest)
+test('llist', llisttest)
 
 dlist = executable('dlist', 'tests/dlist.c',
   include_directories: inc,
@@ -59,3 +60,8 @@ set = executable('set', 'tests/set.c',
   include_directories: inc,
   link_with: algoocxi)
 test('set', set)
+
+chtbl = executable('chtbl', 'tests/chtbl.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('chtbl', chtbl)

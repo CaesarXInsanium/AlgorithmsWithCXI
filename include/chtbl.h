@@ -1,5 +1,5 @@
 #pragma once
-#include "linked_list.h"
+#include "llist.h"
 #include <stdlib.h>
 
 typedef struct CHTbl_ {
@@ -26,7 +26,7 @@ void chtbl_destroy(CHTbl *htbl);
 
 // will use the match() function for comparing and if so adds to internal array
 // bucket. return 0 if sucessful and -1 if not
-void chtbl_insert(CHTbl *htbl, const void *data);
+int chtbl_insert(CHTbl *htbl, const void *data);
 
 // checks if data exists in buckets and if so removes it.
 // return 0 if sucessful and -1 if not

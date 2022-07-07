@@ -17,6 +17,18 @@ passed to hashing function and this determines the bucket in which to place the 
 are resolved by appending to the linked list. Performance in only significantly impacted 
 if the table is full or the number of buckets is too small.
 
+### Example: Symbol Tables
+
+Symbol tables are a way for compilers to maintain information about symbol encountered in program. Such
+as when the preprocessor in the C compiler encounters a MACRO being used, and it needs to be evaluated 
+and to have the section replaced with the correct thing.
+The lexical analyzer will insert the symbols. Such an analyzer will take a string of characters and will group
+them into different categories depending on the need.
+
+Such an analyzer would work by continuously calling next_token, and receive a pointer to the next character.
+If the pointer is NULL, then there are no more tokens and program exits. If there is a valid character, 
+it is determined what type it is. It is grouped with similar tokens and then a Symbol will be returned.
+
 ## Open-Addressed Hash Tables
 
 ## Proper Selection of Hash Function to avoid Collision
