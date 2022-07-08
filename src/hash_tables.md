@@ -11,7 +11,7 @@ However, a proper implementation of a hash table has a way to deal with this fac
 
 ## Chained Hash Tables
 
-it is a simply an array of pointers to linked lists. It contains a pointer to a function that is
+It is a simply an array of pointers to linked lists. It contains a pointer to a function that is
 used to hash keys and another function that is used in order to compare values. Key is
 passed to hashing function and this determines the bucket in which to place the value. Collisions
 are resolved by appending to the linked list. Performance in only significantly impacted 
@@ -31,7 +31,26 @@ it is determined what type it is. It is grouped with similar tokens and then a S
 
 ## Open-Addressed Hash Tables
 
-Open addressed hash tables are
+Open addressed hash tables is different from an open addressed hash table in that instead of storing
+the values inside the linked lists, instead the data is stored in the main array instead.
+The problem with chained hash tables is that with more collisions there will be reduction in performance. 
+With enough data the hash table will not be as useful.
+Open addressed hash tables solve this issued by *probing* that table, which means if an element is
+set to be inserted, then the array will be probed until an empty spot is found. This result in
+an increase in performance but only so far as there are enough slots in the array as to accommodate 
+values. Also, as the open addressed hash table fill up, the performance can degrade but not as quickly as CHTBL.
+At a certain point the open addressed table fills up and values can no longer be inserted.
+
+### Probing
+
+When it comes to proving, there are two ways to do it, there is the linear way which is jut to check every
+single slot in the storage array. The problem with this is that values more often than not will not 
+be spread out uniformly as expected.
+
+Another method is double hashing, which as it's name implies is the act of having values twice. It tries 
+one hash and if that does not work, and then it goes with the other hash function.
+
+
 
 ## Proper Selection of Hash Function to avoid Collision
 
