@@ -19,7 +19,8 @@ foo_src = [
   'source/stack.c',
   'source/queue.c',
   'source/set.c',
-  'source/chtbl.c'
+  'source/chtbl.c',
+  'source/ohtbl.c',
   ]
 
 algoocxi = shared_library(
@@ -65,3 +66,8 @@ chtbl = executable('chtbl', 'tests/chtbl.c',
   include_directories: inc,
   link_with: algoocxi)
 test('chtbl', chtbl)
+
+ohtbl = executable('ohtbl', 'tests/ohtbl.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('ohtbl', ohtbl)

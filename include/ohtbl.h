@@ -42,4 +42,4 @@ int ohtbl_remove(OHTbl *htbl, const void **data);
 int ohtbl_lookup(const OHTbl *htbl, void **data);
 
 // returns number of items in hash table
-#define chtbl_size(htbl) ((htbl)->size)
+#define ohtbl_size(htbl) ((htbl)->size)

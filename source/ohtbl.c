@@ -65,3 +65,37 @@ int ohtbl_insert(OHTbl *htbl, const void *data) {
 
   return -1;
 }
+
+int ohtbl_remove(OHTbl *htbl, const void **data) {
+  int position, i;
+  for (i = 0; htbl->positions; i++) {
+    position = (htbl->h1(*data) + (i * htbl->h2(*data))) % htbl->positions;
+    if (htbl->table[position] == NULL) {
+      return -1;
+    } else if (htbl->table[position] == htbl->vacated) {
+      continue;
+    } else if (htbl->match(htbl->table[position], data)) {
+      *data = htbl->table[position];
+      htbl->table[position] = htbl->vacated;
+      htbl->size--;
+      return 0;
+    }
+  }
+  return -1;
+}
+
+int ohtbl_lookup(const OHTbl *htbl, void **data) {
+  int position, i;
+
+  for (i = 0; htbl->positions; i++) {
+    position = (htbl->h1(*data) + (i * htbl->h2(*data))) % htbl->positions;
+
+    if (htbl->table[position] == NULL) {
+      return -1;
+    } else if (htbl->match(htbl->table[position], *data)) {
+      *data = htbl->table[position];
+      return 0;
+    }
+  }
+  return -1;
+}
