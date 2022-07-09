@@ -14,13 +14,14 @@ inc = include_directories('include')
 foo_src = [
   'source/llist.c',
   'source/dlist.c',
-  #  'include/clist.c',
+  #  'source/clist.c',
   'source/frames.c',
   'source/stack.c',
   'source/queue.c',
   'source/set.c',
   'source/chtbl.c',
   'source/ohtbl.c',
+  'source/bitree.c',
   ]
 
 algoocxi = shared_library(
@@ -71,3 +72,8 @@ ohtbl = executable('ohtbl', 'tests/ohtbl.c',
   include_directories: inc,
   link_with: algoocxi)
 test('ohtbl', ohtbl)
+
+bitree= executable('bitree', 'tests/bitree.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('bitree', bitree)

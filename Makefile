@@ -11,5 +11,9 @@ queue: all
 
 set: all
 	gdb ./build/set
+
 chtbl: all
 	gdb ./build/chtbl
+
+ohtbl: all
+	gdb ./build/ohtbl

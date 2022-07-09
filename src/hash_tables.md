@@ -90,4 +90,14 @@ positions in array and take floor of result.
 b(k) = floor(m (kA mod 1)), where 0 < A < 1
 ```
 
+
 ## Other Facts
+
+- Hash tables are for random item access but not for sequential access
+  - hash tables are simply fancier versions of sets
+- not so much a good hashing function but rather a hashing function that fits the need of the program is required in order to ensure that values are evenly distributed as much as possible
+- worst case for open addressed function occur only when  
+- `Direct-address Tables`: there is a direct one to one mapping between keys and values. 
+- `Linear Congruential Generators`: random number generators that are useful in creating proper has functions
+- `Quadratic Probing`: method of probing the open addressed hash table that is more efficient than linear probing but less than double hashing
+- `Universal Hashing`: method where keys are generated randomly before a hash function is used so that there is never a predictable distribution.

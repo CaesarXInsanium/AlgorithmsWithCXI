@@ -8,4 +8,5 @@
   - [Stacks and Queues](./stacks_queues.md)
   - [Sets](./sets.md)
   - [Hash Tables](./hash_tables.md)
+  - [Trees](./trees.md)
 

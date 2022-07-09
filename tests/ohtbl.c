@@ -29,6 +29,9 @@ int main(void) {
   int *data = (int *)malloc(sizeof(int));
   *data = 8;
   ohtbl_remove(table, (void *)&data);
+  int *n = (int *)malloc(sizeof(int));
+  *n = 3;
+  ohtbl_insert(table, (void *)&n);
 
   printf("Number of Elements: %d", ohtbl_size(table));
 
