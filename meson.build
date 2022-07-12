@@ -1,14 +1,15 @@
 project('C Algorithms', 'c',
   version: '1.0.0',
-  license: 'GPLv3',
-  default_options: ['warning_level=3'])
+  license: 'GPL-3.0-or-later',
+  default_options: [
+    'warning_level=3',
+    'werror=true',
+    'buildtype=debugoptimized',
+    'debug=true',
+    #'optimization=3',
+    'c_std=c11'
+    ])
 
-build_args = [
-    '-Wall',
-    '-Werror',
-    '-g3',
-    '-pedantic'
-  ]
 inc = include_directories('include')
 
 foo_src = [
@@ -22,14 +23,14 @@ foo_src = [
   'source/chtbl.c',
   'source/ohtbl.c',
   'source/bitree.c',
+  'source/transverse.c'
   ]
 
 algoocxi = shared_library(
-  'algoocxi',
+  'awcxi',
   foo_src,
   include_directories: inc,
   install : true,
-  c_args: build_args,
   )
 
 llisttest = executable('llist', 'tests/llist.c',

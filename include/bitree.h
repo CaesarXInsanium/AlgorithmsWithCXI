@@ -36,12 +36,12 @@ int bitree_ins_right(BiTree *tree, BiTreeNode *node, const void *data);
 // Take node and removes child node on right. Will do so the provided tree data strucutre
 // If node is NULL, left side of tree is remove.
 // Will return 0 if sucessful, -1 otherwise
-int bitree_rem_left(BiTree *tree, BiTreeNode *node, const void *data);
+int bitree_rem_left(BiTree *tree, BiTreeNode *node);
 
 // Take node and removes child node on right. Will do so the provided tree data strucutre
 // If node is NULL, right side of tree is remove.
 // Will return 0 if sucessful, -1 otherwise
-int bitree_rem_right(BiTree *tree, BiTreeNode *node, const void *data);
+int bitree_rem_right(BiTree *tree, BiTreeNode *node);
 
 // First argument is the main target tree. Will join the left and right trees into one
 // big tree.

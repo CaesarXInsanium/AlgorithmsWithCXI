@@ -17,3 +17,7 @@ chtbl: all
 
 ohtbl: all
 	gdb ./build/ohtbl
+
+bitree: all
+	gdb ./build/bitree
+
