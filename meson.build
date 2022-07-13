@@ -23,7 +23,8 @@ foo_src = [
   'source/chtbl.c',
   'source/ohtbl.c',
   'source/bitree.c',
-  'source/transverse.c'
+  'source/transverse.c',
+  'source/bistree.c',
   ]
 
 algoocxi = shared_library(
