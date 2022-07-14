@@ -97,19 +97,25 @@ int list_size(const List *list) {
 int list_map_loop(List *list, int map(void *data), int *result) {
   ListElmt *current = list_head(list);
 
+  *result = map(current->data);
+  if (*result == -1) {
+    return -1;
+  }
   while (current->next != NULL) {
+    puts("loop");
+    current = current->next;
     *result = map(current->data);
     if (*result == -1) {
       return -1;
     }
-    current = current->next;
   }
+  puts("Terminate execution");
   return 0;
 }
 
-// I think that the real way to try and implmented search is by actually using a wrapper 
-// data strucutre for the linked list
-// int list_search(List *list, void *key, ListElmt *result){
+// I think that the real way to try and implmented search is by actually using a
+// wrapper data strucutre for the linked list int list_search(List *list, void
+// *key, ListElmt *result){
 //
 //   ListElmt *current = list_head(list);
 //

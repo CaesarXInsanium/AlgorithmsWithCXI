@@ -21,3 +21,6 @@ ohtbl: all
 bitree: all
 	gdb ./build/bitree
 
+bistree: all
+	gdb ./build/bistree
+

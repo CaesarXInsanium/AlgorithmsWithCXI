@@ -1,5 +1,6 @@
 #include "transverse.h"
 #include "llist.h"
+#include <stdio.h>
 
 int preorder(const BiTreeNode *node, List *list) {
   if (!bitree_is_eob(node)) {

@@ -45,7 +45,7 @@ Preorder transversal is done by going to root and adding data to stack. Then rec
 the left child if it is having own. Then call itself on the right side.
 In simpler terms it is going down from root, left to right.
 
-Inorder transversal is done by taking each single node as the root of a subtree. If it has children, 
+In order transversal is done by taking each single node as the root of a subtree. If it has children, 
 start from the left size and check if that is a subtree. If not then add itself to stack. After wards 
 check the right side.
 In simpler terms this function calls itself until it reaches left most end of the tree. Then it
@@ -62,7 +62,7 @@ self-balancing. With each insertion it is compared with the root. If the item is
 then it recuses and check again with the right side. It goes to the left side if it is less than.
 Duplicate keys are not allowed and after each insertion if the tree becomes unbalanced, then it 
 is automatically rebalanced in order to keep optimal insertions and searches. If a tree is not kept properly
-balanced then its efficiency goes from O(logn) to O(n)
+balanced then its efficiency goes from O(long) to O(n)
 
 ## Tree Balancing
 
@@ -103,3 +103,14 @@ node0   node2
 
 This is just a more complicated version of the RR and LL rotations. But it is a bit more complicated than 
 that and has to keep in mind a lot more things to keep in consideration.
+
+## Further Questions
+
+- Each node in a binary tree is capable of keeping a pointer to a siblings and parents in order to make it easier to transverse trough tout the tree
+- in case of data that is not dynamically allocated to destroy() function should be set to NULL
+- Post-order transversal in used in order to be able to properly destroy the entirety of a binary tree
+- larger branching factors only really have an improvement in the case of slower storage mediums
+- as get more items inserted then it falls to reason that eventually the tree would become unbalanced. So that needs to happen are rotations in order to automatically balance the tree
+- `K-ary Trees`: trees with a branching factor of *k*. useful as graphs
+- `red-black trees`: ok
+- `tries`: application of binary trees in searching strings

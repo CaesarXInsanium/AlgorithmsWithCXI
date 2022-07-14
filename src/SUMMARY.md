@@ -9,4 +9,5 @@
   - [Sets](./sets.md)
   - [Hash Tables](./hash_tables.md)
   - [Trees](./trees.md)
+  - [Heaps and Priority Queues](./heaps_queues.md)
 

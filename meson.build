@@ -79,3 +79,8 @@ bitree= executable('bitree', 'tests/bitree.c',
   include_directories: inc,
   link_with: algoocxi)
 test('bitree', bitree)
+
+bistree= executable('bistree', 'tests/bistree.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('bistree', bistree)

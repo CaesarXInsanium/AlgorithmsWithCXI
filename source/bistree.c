@@ -1,4 +1,5 @@
 #include "bistree.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -308,7 +309,8 @@ void bistree_destroy(BisTree *tree) {
 
 int bistree_insert(BisTree *tree, const void *data) {
   int balanced = 0;
-  return insert(tree, &bitree_root(tree), data, &balanced);
+  int result =insert(tree, &bitree_root(tree), data, &balanced); 
+  return result;
 }
 
 int bistree_remove(BisTree *tree, const void *data) {
