@@ -4,8 +4,9 @@ This is me following the book 'Mastering Algorithms with C' by Kyle Loudon.
 
 ## Goals
 
-- learn data structures and algorithms for realsies
+- learn data structures and algorithms for real this time 
 - learn how to debug C code
 - learn how to read code
 - learn to write useful documentation
-- implement useful function
+- implement useful data structures and algorithms
+- after this I will work on my problem-solving skills

@@ -24,3 +24,6 @@ bitree: all
 bistree: all
 	gdb ./build/bistree
 
+heap: all
+	gdb ./build/heap
+

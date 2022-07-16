@@ -25,6 +25,7 @@ foo_src = [
   'source/bitree.c',
   'source/transverse.c',
   'source/bistree.c',
+  'source/heap.c',
   ]
 
 algoocxi = shared_library(
@@ -84,3 +85,8 @@ bistree= executable('bistree', 'tests/bistree.c',
   include_directories: inc,
   link_with: algoocxi)
 test('bistree', bistree)
+
+heap = executable('heap', 'tests/heap.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('heap', heap)
