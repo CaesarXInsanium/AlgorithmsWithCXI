@@ -11,4 +11,6 @@
   - [Trees](./trees.md)
   - [Heaps and Priority Queues](./heaps_queues.md)
   - [Graphs](./graphs.md)
+- [Algorithms](./algorithms.md)
+  - [Sorting and Searching](./sort_search.md)
 

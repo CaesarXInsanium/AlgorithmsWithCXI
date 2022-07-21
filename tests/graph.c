@@ -15,4 +15,5 @@ int cmp(const void *key1, const void *key2) {
 int main(void){
   Graph *graph = (Graph *)malloc(sizeof(Graph));
   graph_init(graph,cmp, free );
+  graph_destroy(graph);
 }

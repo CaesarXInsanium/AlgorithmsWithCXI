@@ -61,14 +61,17 @@ It will add them to a list of vertices that have already been discovered.
 ### Counting Network Hops
 
 Graph algorithms are used in order to determine the shortest number of hops that a packet should travel 
-in order to reach a destination. This can be modeled using an undirected graph.
+in order to reach a destination. This can be modeled using an undirected graph. Any graph can have any
+form and number of paths to a destination. The simplest way to find the shortest path to a destination
+is using breath first search.
 
 
 ### Topological Sorting
 
 Ordering the nodes in a graph into one dimensions in such as way that they are all in one line. Used to 
 correctly configure correct order to do things that require a certain other things to be done first and in a 
-certain order. 
+certain order. This can be used to determine dependency resolution as well as scheduling class so that 
+there are not conflicts. This can be done using Depth-first search
 
 ### Hamiltonioan-cycle Problems
 
@@ -81,3 +84,8 @@ Database optimization, attempts of ordering commands and instructions to databas
 in the correct and optimal manner. This is trying to make commands such that it gives the same results as if done
 is a serial manner. 
 
+## Other Facts
+
+- `Hypergraphs` are simlar to undirected graph but contain hyperedges. This can connect any number of vertices.
+- `Multigrahs` allow for multiple edges for each pair of vertices. 
+- graphs can also be represented as a matrix of size VxV. In which each position can be marked with a flag that signifies a edge betweem corresponding vertices.
