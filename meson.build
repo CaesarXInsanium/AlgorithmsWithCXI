@@ -27,6 +27,7 @@ foo_src = [
   'source/bistree.c',
   'source/heap.c',
   'source/graph.c',
+  'source/issort.c',
   ]
 
 algoocxi = shared_library(
@@ -96,3 +97,9 @@ graph = executable('graph', 'tests/graph.c',
   include_directories: inc,
   link_with: algoocxi)
 test('graph', graph)
+
+issort = executable('issort', 'tests/issort.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('issort', issort)
+

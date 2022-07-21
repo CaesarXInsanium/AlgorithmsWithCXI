@@ -86,6 +86,6 @@ is a serial manner.
 
 ## Other Facts
 
-- `Hypergraphs` are simlar to undirected graph but contain hyperedges. This can connect any number of vertices.
+- `Hypergraphs` are similar to undirected graph but contain hyperedges. This can connect any number of vertices.
 - `Multigrahs` allow for multiple edges for each pair of vertices. 
-- graphs can also be represented as a matrix of size VxV. In which each position can be marked with a flag that signifies a edge betweem corresponding vertices.
+- Graphs can also be represented as a matrix of size VxV. In which each position can be marked with a flag that signifies an edge between corresponding vertices.

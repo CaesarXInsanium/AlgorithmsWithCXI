@@ -1,6 +1,6 @@
 # Algorithms
 
-Will contain information on
+Will contain information and implementations on
 
 - Sorting and Searching
 - Numerical Methods

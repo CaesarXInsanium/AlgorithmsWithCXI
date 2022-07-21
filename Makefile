@@ -27,3 +27,9 @@ bistree: all
 heap: all
 	gdb ./build/heap
 
+graph: all
+	gdb ./build/graph
+
+issort: all
+	gdb ./build/issort
+

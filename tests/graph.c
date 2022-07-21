@@ -1,4 +1,4 @@
-#include "graph.h"
+#include "DataStructures/graph.h"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>

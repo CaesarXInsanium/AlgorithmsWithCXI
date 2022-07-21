@@ -1,5 +1,5 @@
-#include "transverse.h"
-#include "llist.h"
+#include "DataStructures/transverse.h"
+#include "DataStructures/llist.h"
 #include <stdio.h>
 
 int preorder(const BiTreeNode *node, List *list) {

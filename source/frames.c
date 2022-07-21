@@ -1,5 +1,5 @@
-#include "frames.h"
-#include "llist.h"
+#include "DataStructures/frames.h"
+#include "DataStructures/llist.h"
 #include <stdio.h>
 #include <stdlib.h>
 

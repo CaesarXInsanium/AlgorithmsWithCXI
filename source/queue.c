@@ -1,5 +1,5 @@
-#include "queue.h"
-#include "llist.h"
+#include "DataStructures/queue.h"
+#include "DataStructures/llist.h"
 #include <stdlib.h>
 
 

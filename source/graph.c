@@ -1,6 +1,6 @@
-#include "graph.h"
-#include "llist.h"
-#include "set.h"
+#include "DataStructures/graph.h"
+#include "DataStructures/llist.h"
+#include "DataStructures/set.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

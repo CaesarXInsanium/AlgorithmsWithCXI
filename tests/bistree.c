@@ -1,6 +1,6 @@
-#include "bistree.h"
-#include "llist.h"
-#include "transverse.h"
+#include "DataStructures/bistree.h"
+#include "DataStructures/llist.h"
+#include "DataStructures/transverse.h"
 #include <stdio.h>
 #include <stdlib.h>
 

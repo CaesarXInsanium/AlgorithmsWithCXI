@@ -1,4 +1,4 @@
-#include "set.h"
+#include "DataStructures/set.h"
 #include <stdlib.h>
 
 int isequal(const void *a, const void *b) { return *(int *)a == *(int *)b; }

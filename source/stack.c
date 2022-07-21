@@ -1,7 +1,7 @@
 
 #include <stdlib.h>
-#include "llist.h"
-#include "stack.h"
+#include "DataStructures/llist.h"
+#include "DataStructures/stack.h"
 
 
 int stack_push(Stack *stack, const void *data){
