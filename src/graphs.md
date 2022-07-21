@@ -24,8 +24,35 @@ $$
 
 There are two types of relationships. `Adjacency` is a connection between vertices in an undirected graph.
 `Incidence` is connection between vertices in a directed graph. Vertex A incidents into Vertex B.
+`in degree` of a vertex describe the number of other edges that are attached to it. 
+A cycle contains the same vertex twice of more. In a sense that connection of directed vertices
+the same vertex is reached twice. Connected graphs are when all vertices can be reached in an undirected graph.
+In a directed graph a strongly connected graph is when all vertices can be reached using at least one path.
+`A bridge` is any edge whose result in a disconnected from the rest of the graph. It is the connection 
+point from which a certain vertex or set of vertices can be reached. Bi-connected vertices have more than one 
+to the rest of the graph.
+
+The most common method of implementing graphs is using a linked list containing other linked lists.
+In the main list contains the vertex that is being connected to. It also contains pointer to a side linked list.
+This linked list contains items representing connections to other vertices. Each subsequent item is a 
+pointer to another item in the main list.
+
 
 ## Search Methods
+
+There are two main methods of searching for a specific item in the linked lists.
+
+### Bread-first Search
+
+Will take a look at all the other connections and their data from a rode vertex before attempting to
+go recourse and search deeper. Useful for calculating minimum spanning trees and shortest paths.
+This can be done using a queue to keep track of all the vertices that we are current searching.
+
+### Depth-first Search
+
+Will attempt to explore graph by first looking at the most undiscovered graph. It tries to go
+as deep as possible first and then attempts to backtrack. As it fully discovers all the nodes.
+It will add them to a list of vertices that have already been discovered.
 
 ## Algorithms and Sorting
 
@@ -34,7 +61,8 @@ There are two types of relationships. `Adjacency` is a connection between vertic
 ### Counting Network Hops
 
 Graph algorithms are used in order to determine the shortest number of hops that a packet should travel 
-in order to reach a destination.
+in order to reach a destination. This can be modeled using an undirected graph.
+
 
 ### Topological Sorting
 

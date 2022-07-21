@@ -26,6 +26,7 @@ foo_src = [
   'source/transverse.c',
   'source/bistree.c',
   'source/heap.c',
+  'source/graph.c',
   ]
 
 algoocxi = shared_library(
@@ -90,3 +91,8 @@ heap = executable('heap', 'tests/heap.c',
   include_directories: inc,
   link_with: algoocxi)
 test('heap', heap)
+
+graph = executable('graph', 'tests/graph.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('graph', graph)
