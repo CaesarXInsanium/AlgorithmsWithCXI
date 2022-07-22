@@ -1,3 +1,4 @@
+
 #include "Algorithms/sort.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,10 +19,10 @@ int cmp(const void *key1, const void *key2) {
 }
 
 int main(void) {
-  void **buffer = malloc(TEST_SIZE*sizeof(int *));
+  void **buffer = malloc(TEST_SIZE * sizeof(int *));
   for (int i = 0; i < TEST_SIZE; i++) {
     int *k = (int *)malloc(sizeof(int));
-    *k = rand() >> 8;
+    *k = rand();
     buffer[i] = k;
   }
 
@@ -30,7 +31,7 @@ int main(void) {
     printf("Value:\t%d\n", *(int *)buffer[i]);
   }
 
-  issort(buffer, sizeof(buffer), sizeof(int *), cmp);
+  qksort(buffer, sizeof(buffer), sizeof(int *), 0, TEST_SIZE - 1, cmp);
 
   puts("Sorted");
   for (int i = 0; i < TEST_SIZE; i++) {

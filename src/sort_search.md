@@ -30,6 +30,22 @@ pointers in order to keep track of the correct location.
 
 ## Quick sort
 
+This is a divide and conquer sort of algorithm. It works by break the problem down into smaller
+and smaller chunks recursively and generally the best one for most use cases.
+
+1. Divide: Partition data into two partitions
+2. Conquer: sort two the two partitions by calling quick sort on the smaller partitions
+3. Combine: join the two partitions into one partition since they are both now sort
+
+While in theory quick sort has the same complexity as insertion sort, it is generally better than
+insertion sort. Quick sort only really works if the portions are always the same size each time.
+Choosing a median by choosing three random values from array and choosing their. Of course
+the average case running time depends on whether the elements are randomly distributed.
+
+The fundamental theory of how quick sort works is by recursively partitioning a set of elements
+and then once finished they are to be joined. Quick sort can sort in place. 
+
+
 ## Merge Sort
 
 ## Counting Sort

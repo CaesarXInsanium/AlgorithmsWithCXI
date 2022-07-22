@@ -28,6 +28,7 @@ foo_src = [
   'source/heap.c',
   'source/graph.c',
   'source/issort.c',
+  'source/qksort.c',
   ]
 
 algoocxi = shared_library(
@@ -102,4 +103,9 @@ issort = executable('issort', 'tests/issort.c',
   include_directories: inc,
   link_with: algoocxi)
 test('issort', issort)
+
+qksort = executable('qksort', 'tests/qksort.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('qksort', qksort)
 

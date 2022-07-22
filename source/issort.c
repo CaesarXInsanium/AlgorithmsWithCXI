@@ -1,4 +1,4 @@
-#include "Algorithms/issort.h"
+#include "Algorithms/sort.h"
 #include <stdlib.h>
 #include <string.h>
 

@@ -33,3 +33,6 @@ graph: all
 issort: all
 	gdb ./build/issort
 
+qksort: all
+	gdb ./build/qksort
+
