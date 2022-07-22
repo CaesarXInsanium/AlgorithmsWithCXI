@@ -46,6 +46,7 @@ The fundamental theory of how quick sort works is by recursively partitioning a 
 and then once finished they are to be joined. Quick sort can sort in place. 
 
 
+
 ## Merge Sort
 
 ## Counting Sort
@@ -60,6 +61,7 @@ and then once finished they are to be joined. Quick sort can sort in place.
   - finding the nth smallest/largest item in a set
 - Directory Listing
   - items in a directory must be sorted in some form or another before being displayed
+  - ls is implemented using a simple function that takes listings in a directory and sorts them by a particular order
 - Database Systems
   - storing and retrieving data must be kept at the maximum efficiency
 - Spell Checkers
