@@ -36,3 +36,5 @@ issort: all
 qksort: all
 	gdb ./build/qksort
 
+mgsort: all
+	gdb ./build/mgsort

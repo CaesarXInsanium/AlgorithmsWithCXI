@@ -49,9 +49,35 @@ and then once finished they are to be joined. Quick sort can sort in place.
 
 ## Merge Sort
 
+Another divide and conquer algorithm. However, it will not sort in place, instead making a new copy
+of the data in a new location that is sorted. Once again we start with a pile of unsorted stuff.
+
+1. Divide data in half
+2. Sort the two side by calling the sorting function recursively
+3. Merge the two items
+
+The merging process allows one to the separate item to be combined into one array. However, due to nature of
+merge sort, space requirements are twice that of insertion and quick sort.
+
 ## Counting Sort
 
+Linear sorting algorithm that is as efficient as it gets, works by counting number of times
+an element occurs in a set. Can only work with data that can be expressed in integer form.
+Elements of equal number are left alone and as such the algorithm is stable.
+
+Elements must be stored in continuous block of memory. While counting sort is works in place,
+additional memory must be allocated in order to store temporary data. 
+
 ## Radix Sort
+
+Linear time sorting algorithm, sort data by going from most significant digit to the least significant digit.
+Radix sort is a sort of wrapper sorted on another sorting algorithm since it sort by significant
+digits. This is done in a way, so that there are as few comparisons and swaps as possible, so 
+a stable secondary sorting algorithm, is need.
+
+Requires data to representable as integers and that it can be subdivided into smaller pieces of data.
+Implementation requires applying counting sort one position at a time. Sorting begins from the least
+significant portion.
 
 ## Binary Search
 

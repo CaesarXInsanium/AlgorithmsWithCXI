@@ -7,7 +7,7 @@ project('C Algorithms', 'c',
     'buildtype=debugoptimized',
     'debug=true',
     #'optimization=3',
-    'c_std=c11'
+    'c_std=c18'
     ])
 
 inc = include_directories('include')
@@ -29,13 +29,16 @@ foo_src = [
   'source/graph.c',
   'source/issort.c',
   'source/qksort.c',
+  'source/mgsort.c',
+  'source/ctsort.c',
+  'source/rxsort.c',
   ]
 
 algoocxi = shared_library(
   'awcxi',
   foo_src,
   include_directories: inc,
-  install : true,
+  install : false,
   )
 
 llisttest = executable('llist', 'tests/llist.c',
@@ -109,3 +112,17 @@ qksort = executable('qksort', 'tests/qksort.c',
   link_with: algoocxi)
 test('qksort', qksort)
 
+mgsort = executable('mgsort', 'tests/mgsort.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('mgsort', mgsort)
+
+ctsort = executable('ctsort', 'tests/ctsort.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('ctsort', ctsort)
+
+rxsort = executable('rxsort', 'tests/rxsort.c',
+  include_directories: inc,
+  link_with: algoocxi)
+test('rxsort', rxsort)
