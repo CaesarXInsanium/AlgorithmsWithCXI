@@ -1,40 +1,61 @@
-all:
-	meson compile -C build -v
-test:
-	meson test -C build
+BUILD_DIR=build
+debug=all
+
+all: $(BUILD_DIR)
+	echo $(BUILD_DIR)
+	meson compile -C  $(BUILD_DIR) -v
+
+$(BUILD_DIR):
+	meson setup build
+
+clean:
+	rm -rf $(BUILD_DIR)
+	clear
+
+test: $(BUILD_DIR)
+	if [ $(debug) -eq "all" ]; then
+		meson test -C $(BUILD_DIR)
+	else
+		if [ test -e $(BUILD_DIR)/$(debug) ]; then
+			echo "file exits"
+		else
+			echo "file does not exist"
+		fi
+	fi
+
 
 stack: all
-	gdb ./build/stack
+	gdb ./$(BUILD_DIR)/stack
 
 queue: all
-	gdb ./build/queue
+	gdb ./$(BUILD_DIR)/queue
 
 set: all
-	gdb ./build/set
+	gdb ./$(BUILD_DIR)/set
 
 chtbl: all
-	gdb ./build/chtbl
+	gdb ./$(BUILD_DIR)/chtbl
 
 ohtbl: all
-	gdb ./build/ohtbl
+	gdb ./$(BUILD_DIR)/ohtbl
 
 bitree: all
-	gdb ./build/bitree
+	gdb ./$(BUILD_DIR)/bitree
 
 bistree: all
-	gdb ./build/bistree
+	gdb ./$(BUILD_DIR)/bistree
 
 heap: all
-	gdb ./build/heap
+	gdb ./$(BUILD_DIR)/heap
 
 graph: all
-	gdb ./build/graph
+	gdb ./$(BUILD_DIR)/graph
 
 issort: all
-	gdb ./build/issort
+	gdb ./$(BUILD_DIR)/issort
 
 qksort: all
-	gdb ./build/qksort
+	gdb ./$(BUILD_DIR)/qksort
 
 mgsort: all
-	gdb ./build/mgsort
+	gdb ./$(BUILD_DIR)/mgsort

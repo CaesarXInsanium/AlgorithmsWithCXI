@@ -31,7 +31,8 @@ foo_src = [
   'source/qksort.c',
   'source/mgsort.c',
   'source/ctsort.c',
-  'source/rxsort.c',
+  # 'source/rxsort.c',
+  'source/bisearch.c',
   ]
 
 algoocxi = shared_library(
@@ -122,7 +123,12 @@ ctsort = executable('ctsort', 'tests/ctsort.c',
   link_with: algoocxi)
 test('ctsort', ctsort)
 
-rxsort = executable('rxsort', 'tests/rxsort.c',
+# rxsort = executable('rxsort', 'tests/rxsort.c',
+#   include_directories: inc,
+#   link_with: algoocxi)
+# test('rxsort', rxsort)
+
+bisearch = executable('bisearch ', 'tests/bisearch.c',
   include_directories: inc,
   link_with: algoocxi)
-test('rxsort', rxsort)
+test('bisearch', bisearch)

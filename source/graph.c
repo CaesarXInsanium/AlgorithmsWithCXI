@@ -102,6 +102,7 @@ int graph_ins_edge(Graph *graph, const void *data1, const void *data2) {
 
 int graph_rem_vertex(Graph *graph, void **data) {
   ListElmt *element, *temp, *prev;
+  temp = NULL;
   AdjList *adjlist;
   int found;
 
@@ -155,15 +156,13 @@ int graph_rem_edge(Graph *graph, const void *data1, const void **data2) {
 }
 
 int graph_adjlist(const Graph *graph, const void *data, AdjList **adjlist) {
-  ListElmt *element, *prev;
+  ListElmt *element;
 
-  prev = NULL;
   for (element = list_head(&graph->adjlists); element != NULL;
        element = list_next(element)) {
 
     if (graph->match(data, ((AdjList *)list_data(element))->vertex))
       break;
-    prev = element;
   }
 
   if (element == NULL)
@@ -176,16 +175,12 @@ int graph_adjlist(const Graph *graph, const void *data, AdjList **adjlist) {
 
 int graph_is_adjencent(const Graph *graph, const void *data1,
                        const void *data2) {
-  ListElmt *element, *prev;
-
-  prev = NULL;
+  ListElmt *element;
 
   for (element = list_head(&graph->adjlists); element != NULL;
        element = list_next(element)) {
     if (graph->match(data1, ((AdjList *)list_data(element))->vertex))
       break;
-
-    prev = element;
   }
   if (element == NULL)
     return 0;

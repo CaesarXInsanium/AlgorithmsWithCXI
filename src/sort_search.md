@@ -81,6 +81,22 @@ significant portion.
 
 ## Binary Search
 
+Binary search is a technique that can only be used on sorted data in order to find specific data 
+in a list or array. It works by guessing numbers at the midpoint until the correct number is found.
+
+1. Calculate midpoint, retrieve value
+2. compare value, if value is less than key, then calculate new midpoint between start and midpoint. If greater than do opposite
+3. if value is equal to key, return index of value if not found return error
+
+This method of searching for data is not efficient in a data structure where there are frequent 
+insertions and deletions. For that use a binary search tree. The reasons that are is not efficient
+is because the sorting algorithm must be run every single time that a new item is inserted.
+Binary search is best for static and continuous memory regions.
+
+We will implement a version of binary search that works by maintaining two
+variables to determine the left and right bounds, each time that the key is not found the midpoint
+between those bounds is calculated, and the cycle begins again.
+
 ## Applications
 
 - Order Statistics
@@ -92,6 +108,19 @@ significant portion.
   - storing and retrieving data must be kept at the maximum efficiency
 - Spell Checkers
   - sorting possible correct spellings of a word from most likely to the least likely
+  - and then searching for the correct word that is most likely.
+  - Works by checking all words is a document against a dictionary list. If each word is found then it is spell correctly
+  - if not, then spell suggestions must be calculated
 - Spreadsheet
   - very fundamental to the way spreadsheets work, must display data in a form that is helpful to user's goals
 
+## Further Questions and Answers
+
+- Merge sort is the best way to sort data divided into chunks that is spread between different storage devices
+- insertion sort is best when data is mostly already sorted and a single element is added in
+- radix sort is best for character arrays.
+- Quick sort is best for general use with random structures'
+- radix sort can be best for byte base sorting using proper parameters
+- bubble sort is inefficient algorithm
+- heap sort is as good as quick sort except for some of the best implementations of quick sort
+- intro sort behaves like quick sort but can switch over to using heap sort if it detects from conditions where it would be superior
