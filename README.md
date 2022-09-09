@@ -2,6 +2,11 @@
 
 This is me following the book 'Mastering Algorithms with C' by Kyle Loudon.
 
+## Update
+
+Move on to another book, 'Algorithm Design Manual'. This one is better because
+it explains some things that should gbe explained.
+
 ## Goals
 
 - learn data structures and algorithms for real this time 
